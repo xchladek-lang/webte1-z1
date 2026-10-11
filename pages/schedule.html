@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rozvrh | Samuel David Chládek</title>
+  <meta name="description" content="Môj rozvrh v zimnom semestri 2026/2027 na FEI STU – kedy ma zastihneš a kedy mám voľno.">
+  <meta property="og:title" content="Samuel David Chládek – kedy ma zastihnete">
+  <meta property="og:description" content="Rozvrh hodín na FEI STU so zvýraznením práve prebiehajúcej hodiny.">
+  <meta property="og:image" content="../img/og-image.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">SDC</div>
+      <div>
+        <p class="header__name">Samuel David Chládek</p>
+        <p class="header__slogan">Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+      </div>
+      <button class="button menu-button" type="button" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul class="container nav__list">
+      <li class="nav__item"><a class="nav__link" href="../index.html">Profil</a></li>
+      <li class="nav__item"><a class="nav__link" href="cv.html">Životopis</a></li>
+      <li class="nav__item"><a class="nav__link" href="workspace.html">Pracovisko</a></li>
+      <li class="nav__item"><a class="nav__link nav__link--active" href="schedule.html" aria-current="page">Rozvrh</a></li>
+      <li class="nav__item"><a class="nav__link" href="map.html">Mapa</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="container main">
+    <h1>Kedy ma zastihnete</h1>
+    <section class="card">
+      <h2>Rozvrh v zimnom semestri 2026/2027</h2>
+      <p class="message" id="schedule-status">Ktorá hodina práve prebieha, ti ukážem so zapnutým JavaScriptom.</p>
+
+      <div class="filters">
+        <button class="button button--active" type="button" data-filter="all" aria-pressed="true">Všetko</button>
+        <button class="button" type="button" data-filter="lecture" aria-pressed="false">Prednášky</button>
+        <button class="button" type="button" data-filter="exercise" aria-pressed="false">Cvičenia</button>
+      </div>
+      <p>Farby: <span class="legend" data-type="lecture">prednáška</span> <span class="legend" data-type="exercise">cvičenie</span> <span class="legend" data-type="sport">telesná (patrí k cvičeniam)</span></p>
+
+      <p class="message" id="filter-message" hidden>Pre tento filter nemám v rozvrhu žiadnu hodinu.</p>
+      <div class="table-wrap" tabindex="0">
+        <table class="schedule">
+          <thead>
+            <tr>
+              <th class="schedule__first">Deň</th>
+              <th>7:00</th>
+              <th>8:00</th>
+              <th>9:00</th>
+              <th>10:00</th>
+              <th>11:00</th>
+              <th>12:00</th>
+              <th>13:00</th>
+              <th>14:00</th>
+              <th>15:00</th>
+              <th>16:00</th>
+              <th>17:00</th>
+              <th>18:00</th>
+              <th>19:00</th>
+              <th>20:00</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Po</th>
+              <td colspan="4"></td>
+              <td colspan="2" data-type="exercise" data-day="1" data-start="11:00" data-end="12:50"><b>Webové technológie 1</b><br>cvičenie, c137<br>K. Žáková</td>
+              <td colspan="2" data-type="exercise" data-day="1" data-start="13:00" data-end="14:50"><b>Operačné systémy</b><br>cvičenie, cpu-c<br>M. Jókay</td>
+              <td colspan="6"></td>
+            </tr>
+            <tr>
+              <th>Ut</th>
+              <td></td>
+              <td colspan="2" data-type="lecture" data-day="2" data-start="8:00" data-end="9:50"><b>Analýza a zložitosť algoritmov</b><br>prednáška, de300<br>M. Bečka</td>
+              <td colspan="2" data-type="lecture" data-day="2" data-start="10:00" data-end="11:50"><b>Webové technológie 1</b><br>prednáška, cd150<br>K. Žáková</td>
+              <td colspan="2" data-type="sport" data-day="2" data-start="12:00" data-end="13:50"><b>Telesná kultúra 5</b><br>telesná, Strelnica<br>L. Jurkovič</td>
+              <td></td>
+              <td colspan="2" data-type="lecture" data-day="2" data-start="15:00" data-end="16:50"><b>Softvérové inžinierstvo</b><br>prednáška, cd300<br>O. Gallo</td>
+              <td data-type="exercise" data-day="2" data-start="17:00" data-end="17:50"><b>Softvérové inžinierstvo</b><br>cvičenie, cd300<br>O. Gallo</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <th>St</th>
+              <td></td>
+              <td colspan="2" data-type="lecture" data-day="3" data-start="8:00" data-end="9:50"><b>Operačné systémy</b><br>prednáška, cd300<br>M. Jókay</td>
+              <td colspan="2" data-type="lecture" data-day="3" data-start="10:00" data-end="11:50"><b>Analýza a zložitosť algoritmov</b><br>prednáška, bc150<br>M. Bečka</td>
+              <td></td>
+              <td colspan="2" data-type="lecture" data-day="3" data-start="13:00" data-end="14:50"><b>Webové technológie 1</b><br>prednáška, cd150<br>K. Žáková</td>
+              <td colspan="6"></td>
+            </tr>
+            <tr>
+              <th>Št</th>
+              <td colspan="3"></td>
+              <td data-type="exercise" data-day="4" data-start="10:00" data-end="10:50"><b>Softvérové inžinierstvo</b><br>cvičenie, c137<br>M. Nehéz</td>
+              <td colspan="10"></td>
+            </tr>
+            <tr>
+              <th>Pi</th>
+              <td></td>
+              <td data-type="exercise" data-day="5" data-start="8:00" data-end="8:50"><b>Analýza a zložitosť algoritmov</b><br>cvičenie, cd150<br>M. Bečka</td>
+              <td colspan="12"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Koľko semestra už ubehlo</h2>
+      <p>Semester trvá od 14. 9. 2026 do 14. 12. 2026.</p>
+      <progress class="progress" id="semester-progress" max="100" value="0"></progress>
+      <p id="semester-label">Percento sa zobrazí so zapnutým JavaScriptom.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <address>
+        Samuel David Chládek, Bartókova 6159/8, 811 02 Bratislava<br>
+        <a href="mailto:samuelchladek50093@gmail.com">samuelchladek50093@gmail.com</a>, <a href="tel:+421123456789">+421 123 456 789</a>
+      </address>
+      <p>
+        © 2026 Samuel David Chládek<br>
+        Mapa <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a>, <a href="https://leafletjs.com/">Leaflet</a>,
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

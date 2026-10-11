@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa | Samuel David Chládek</title>
+  <meta name="description" content="Interaktívna mapa: kde bývam, kde študujem a ako ďaleko sú od toho tvoje obľúbené miesta.">
+  <meta property="og:title" content="Samuel David Chládek – kde ma nájdete">
+  <meta property="og:description" content="Mapa so školou, bydliskom a výpočtom vzdialeností vlastných bodov.">
+  <meta property="og:image" content="../img/og-image.png">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+  <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">SDC</div>
+      <div>
+        <p class="header__name">Samuel David Chládek</p>
+        <p class="header__slogan">Študent aplikovanej informatiky, zaujímajú ma webové technológie.</p>
+      </div>
+      <button class="button menu-button" type="button" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul class="container nav__list">
+      <li class="nav__item"><a class="nav__link" href="../index.html">Profil</a></li>
+      <li class="nav__item"><a class="nav__link" href="cv.html">Životopis</a></li>
+      <li class="nav__item"><a class="nav__link" href="workspace.html">Pracovisko</a></li>
+      <li class="nav__item"><a class="nav__link" href="schedule.html">Rozvrh</a></li>
+      <li class="nav__item"><a class="nav__link nav__link--active" href="map.html" aria-current="page">Mapa</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="container main">
+    <h1>Kde ma nájdete</h1>
+    <div class="map-layout">
+      <section class="card">
+        <h2>Mapa</h2>
+        <div id="map" class="map">
+          <noscript><p>Mapa potrebuje zapnutý JavaScript.</p></noscript>
+        </div>
+        <p>Zdroje: <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a>, knižnica <a href="https://leafletjs.com/">Leaflet</a></p>
+      </section>
+
+      <section class="card">
+        <h2>Moje body</h2>
+        <p>
+          Vzdialenosť počítam k:<br>
+          <label><input type="radio" name="target" id="target-school" checked> škole</label><br>
+          <label><input type="radio" name="target" id="target-home"> domovu</label>
+        </p>
+
+        <p class="message" id="map-message" hidden></p>
+
+        <form class="map-form" id="point-form" hidden>
+          <label for="point-name">Názov bodu:</label>
+          <input id="point-name" type="text" maxlength="40" required>
+          <button class="button" type="submit">Uložiť</button>
+          <button class="button" type="button" id="point-cancel">Zrušiť</button>
+        </form>
+
+        <p class="message" id="points-empty">Zatiaľ tu nemáš žiadny bod. Klikni na mapu, bod pomenuj a potom ho vyber v zozname – ukážem ti, ako ďaleko je od školy alebo od domova.</p>
+        <ul class="point-list" id="point-list"></ul>
+        <p class="message" id="distance-result" hidden></p>
+
+        <button class="button" type="button" id="add-center">Pridať bod do stredu mapy</button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <address>
+        Samuel David Chládek, Bartókova 6159/8, 811 02 Bratislava<br>
+        <a href="mailto:samuelchladek50093@gmail.com">samuelchladek50093@gmail.com</a>, <a href="tel:+421123456789">+421 123 456 789</a>
+      </address>
+      <p>
+        © 2026 Samuel David Chládek<br>
+        Mapa <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap</a>, <a href="https://leafletjs.com/">Leaflet</a>,
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

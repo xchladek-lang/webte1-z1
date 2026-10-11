@@ -1,0 +1,63 @@
+/* Print version of the CV: one A4 page, no menu, no backgrounds */
+@media print {
+  :root {
+    --color-text: #000000;
+    --color-heading: #000000;
+    --color-link: #000000;
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-alt: #ffffff;
+    --color-border: #999999;
+  }
+
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  .skip-link,
+  .menu-button,
+  .nav,
+  .footer {
+    display: none;
+  }
+
+  .logo {
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+  }
+
+  .main {
+    padding: 0;
+  }
+
+  h1 {
+    margin: 4mm 0;
+    font-size: 16pt;
+  }
+
+  h2 {
+    margin: 3mm 0 1mm;
+    font-size: 12pt;
+  }
+
+  .cv {
+    grid-template-columns: 1fr 2fr;
+    border: none;
+  }
+
+  .cv__side,
+  .cv__main {
+    padding: 0 5mm 0 0;
+  }
+
+  .cv__photo {
+    width: 30mm;
+    margin-top: 0;
+  }
+}
